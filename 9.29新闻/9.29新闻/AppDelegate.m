@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+
 @interface AppDelegate ()
 
 @end
@@ -16,7 +17,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // 1.设置缓存why? 缓存会越来越大
+    NSURLCache *cache = [[NSURLCache alloc] initWithMemoryCapacity:15 * 1024 * 1024 diskCapacity:15 * 1024 * 1024 diskPath:nil];
+    [NSURLCache setSharedURLCache:cache];
+    // 2.设置网络指示器
+
+    
     return YES;
 }
 

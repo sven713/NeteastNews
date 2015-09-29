@@ -11,3 +11,6 @@
 @interface NewsTableViewController : UITableViewController
 
 @end
+/*
+ 不能提交代码,重启xcode就行了
+ */
