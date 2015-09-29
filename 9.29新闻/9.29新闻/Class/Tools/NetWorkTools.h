@@ -6,8 +6,10 @@
 //  Copyright (c) 2015年 sven. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "AFHTTPSessionManager.h"
 
-@interface NetWorkTools : NSObject
+@interface NetWorkTools : AFHTTPSessionManager
 + (instancetype)shareNetWorkTools;
 @end
+
+// 继承错了 AFHTTPSessionManager.h
