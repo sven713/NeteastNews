@@ -22,7 +22,7 @@
 /**大图*/
 @property (nonatomic, assign, getter=isBigimg) BOOL imgType;
 
-+ (instancetype)newsWithDict:(NSDictionary *)dict;
+//+ (instancetype)newsWithDict:(NSDictionary *)dict;
 
 /**懒加载*/
 + (void)loadNewsWithURL:(NSString *)urlString finish:(void(^)(NSArray *arr))finish;

@@ -11,6 +11,21 @@
 
 @implementation NSObject (Extension)
 
+
+
++(instancetype)objWithDict:(NSDictionary *)dict {
+    id obj = [[self alloc] init];
+    //    [obj setValuesForKeysWithDictionary:dict]; // 为啥这样写会崩?属性少了,网络数据字典中的属性很多
+    
+    NSArray *arr = [self loadPorperty];
+    for (NSString *str in arr) {
+        if (dict[str] != nil) {
+            [obj setValue:dict[str] forKey:str];
+        }
+    }
+    return obj;
+}
+
 const char * kPropertyKey = "kPropetyKey";
 // 用运行时动态获取类的属性->自己声明的属性
 + (NSArray *)loadPorperty { // 类方法
@@ -40,8 +55,7 @@ const char * kPropertyKey = "kPropetyKey";
     // 1关联对象 2key 3值 4策略
     objc_setAssociatedObject(self, kPropertyKey, arrM, OBJC_ASSOCIATION_COPY_NONATOMIC);
     return objc_getAssociatedObject(self, kPropertyKey);
-    //    return arrM.copy;
-    //    return @[@"title",@"digest",@"replyCount",@"imgsrc"];
+
 }
 
 @end

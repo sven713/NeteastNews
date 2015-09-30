@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface NSObject (Extension)
-
++(instancetype)objWithDict:(NSDictionary *)dict;
++ (NSArray *)loadPorperty;
 @end

@@ -59,8 +59,8 @@
 }
 
 - (void)awakeFromNib {
-#warning ???宽度-116
-    self.detailLbl.preferredMaxLayoutWidth = [UIScreen mainScreen].bounds.size.width - CGRectGetMaxX(self.imageView.frame) - 116;
+#warning ???宽度-116 imageView
+    self.detailLbl.preferredMaxLayoutWidth = [UIScreen mainScreen].bounds.size.width - CGRectGetMaxX(self.imgView.frame) - 16;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
