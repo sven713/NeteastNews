@@ -28,4 +28,4 @@
 + (void)loadNewsWithURL:(NSString *)urlString finish:(void(^)(NSArray *arr))finish;
 // block作为参数,回调 1定义3执行写在一起(.h,.m),赋值在其他地方
 @end
-#warning getter是啥?
+#warning getter是啥?一个参数

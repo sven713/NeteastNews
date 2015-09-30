@@ -45,7 +45,7 @@ const char * kPropertyKey = "kPropetyKey";
     NSMutableArray *arrM = [NSMutableArray arrayWithCapacity:count];
     for (unsigned int i = 0; i < count; i ++) {
         objc_property_t pty = list[i]; // 取出数组
-        const char *pro = property_getName(pty); // pro:char pty:结构体
+        const char *pro = property_getName(pty); // pro:char   pty:结构体
         // 将字符串转换成OC属性
         [arrM addObject:[NSString stringWithUTF8String:pro]];
     }

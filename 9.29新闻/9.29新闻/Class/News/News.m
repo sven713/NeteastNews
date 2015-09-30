@@ -62,8 +62,10 @@
 - (NSString *)description {
 #warning 这啥意思?
     NSArray *arr = [self.class loadPorperty];
-    // 把自定义对象转换成字典
+    // 把自定义对象转换成字典  kvc  self跟arr对应
     NSDictionary *dict = [self dictionaryWithValuesForKeys:arr];
+    
+    
     return [NSString stringWithFormat:@"<%@:%p>%@",self.class,self,dict];
 }
 
