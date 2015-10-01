@@ -13,7 +13,7 @@
 @property (nonatomic, copy) NSString *tname;
 
 @property (nonatomic, copy) NSString *tid;
-
+@property (nonatomic, copy) NSString *urlString;
 /**加载频道数组*/
 + (NSArray *)channelList; // 类似懒加载?
 @end

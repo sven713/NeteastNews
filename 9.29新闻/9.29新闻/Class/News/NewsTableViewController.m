@@ -16,6 +16,14 @@
 
 @implementation NewsTableViewController
 
+- (void)setUrlString:(NSString *)urlString {
+    _urlString = urlString;
+    // @"T1348647853363/0-20.html"
+    [News loadNewsWithURL:_urlString finish:^(NSArray *arr) {
+        self.newsList = arr; // 需要重新set方法
+    }];
+}
+
 -(void)setNewsList:(NSArray *)newsList {
     _newsList = newsList;
     [self.tableView reloadData];
@@ -24,9 +32,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // url是拼接出来的
-    [News loadNewsWithURL:@"T1348647853363/0-20.html" finish:^(NSArray *arr) {
-        self.newsList = arr; // 需要重新set方法
-    }];
+//    [News loadNewsWithURL:@"T1348647853363/0-20.html" finish:^(NSArray *arr) {
+//        self.newsList = arr; // 需要重新set方法
+//    }];
     
     self.tableView.estimatedRowHeight = 100;
     self.tableView.rowHeight = UITableViewAutomaticDimension;

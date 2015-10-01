@@ -82,7 +82,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBT-ws-0Y8" userLabel="评论数">
-                                            <rect key="frame" x="559" y="141" width="33" height="31"/>
+                                            <rect key="frame" x="559" y="152" width="33" height="20"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -100,7 +100,7 @@
                                         <constraint firstItem="Peq-kA-8pN" firstAttribute="top" secondItem="ZiJ-70-PoT" secondAttribute="topMargin" id="Ibe-ur-WvG"/>
                                         <constraint firstItem="mqm-m0-SDV" firstAttribute="top" secondItem="Peq-kA-8pN" secondAttribute="bottom" constant="8" id="Lmy-Sx-PsB"/>
                                         <constraint firstItem="ypM-3a-mFi" firstAttribute="leading" secondItem="ZiJ-70-PoT" secondAttribute="leadingMargin" id="WrC-xg-7Br"/>
-                                        <constraint firstItem="lBT-ws-0Y8" firstAttribute="top" secondItem="mqm-m0-SDV" secondAttribute="bottom" constant="7" id="Xjg-AT-hRT"/>
+                                        <constraint firstItem="lBT-ws-0Y8" firstAttribute="top" secondItem="mqm-m0-SDV" secondAttribute="bottom" constant="18" id="Xjg-AT-hRT"/>
                                         <constraint firstItem="Peq-kA-8pN" firstAttribute="leading" secondItem="ZiJ-70-PoT" secondAttribute="leadingMargin" id="aWm-E0-owW"/>
                                         <constraint firstAttribute="trailing" secondItem="mqm-m0-SDV" secondAttribute="trailing" constant="8" id="gwf-0F-Fhp"/>
                                         <constraint firstItem="mqm-m0-SDV" firstAttribute="leading" secondItem="ZiJ-70-PoT" secondAttribute="leading" constant="8" id="yDl-a9-8Gc"/>

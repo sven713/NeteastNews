@@ -10,6 +10,12 @@
 #import "NSObject+Extension.h"
 
 @implementation Channel
+
+-(void)setTid:(NSString *)tid { // "T1348647853363/0-20.html"
+    _tid = tid;
+    _urlString = [NSString stringWithFormat:@"%@/0-20.html",_tid];
+}
+
 +(NSArray *)channelList {
     // 1.本地json->二进制
     NSString *path = [[NSBundle mainBundle] pathForResource:@"topic_news.json" ofType:nil];
@@ -23,7 +29,13 @@
     for (NSDictionary *dict in arr) {
         [arrM addObject:[self objWithDict:dict]]; // 字典转模型,模型是数组
     }
-    return arrM.copy;
+    
+    // 利用tid给数组排序
+    return [arrM sortedArrayUsingComparator:^NSComparisonResult(Channel *obj1, Channel *obj2) {
+        return [obj1.tid compare:obj2.tid];
+    }];
+    
+//    return arrM.copy;
 }
 
 - (NSString *)description {

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface NewsTableViewController : UITableViewController
-
+@property (nonatomic, copy) NSString *urlString;
 @end
 /*
  不能提交代码,重启xcode就行了

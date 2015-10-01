@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "AFNetworkActivityIndicatorManager.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +21,7 @@
     NSURLCache *cache = [[NSURLCache alloc] initWithMemoryCapacity:15 * 1024 * 1024 diskCapacity:15 * 1024 * 1024 diskPath:nil];
     [NSURLCache setSharedURLCache:cache];
     // 2.设置网络指示器
-
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     
     return YES;
 }

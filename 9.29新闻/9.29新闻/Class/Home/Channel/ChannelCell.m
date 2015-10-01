@@ -10,10 +10,21 @@
 #import "NewsTableViewController.h"
 
 @interface ChannelCell ()
-@property (nonatomic, strong) NewsTableViewController *vc;
+
 @end
 
 @implementation ChannelCell
+
+//-(void)setUrlStr:(NSString *)urlStr {
+//    _urlStr = urlStr;
+//    self.vc.urlString = urlStr;
+//}
+
+-(void)setUrlString:(NSString *)urlString {
+    _urlString = urlString;
+    self.vc.urlString = urlString;
+}
+
 // 从xib/sb一加载就执行
 -(void)awakeFromNib {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"News" bundle:[NSBundle mainBundle]];
