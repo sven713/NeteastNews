@@ -515,6 +515,9 @@ forHTTPHeaderField:(NSString *)field
             }
             [mutableRequest setHTTPBody:[query dataUsingEncoding:self.stringEncoding]];
         }
+        NSLog(@"-----http---%@?%@", request.URL,query);
+    }else {
+        NSLog(@"-----http---%@", request.URL);
     }
 
     return mutableRequest;
